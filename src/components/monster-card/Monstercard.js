@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
  
 }));
 
-export default function RecipeReviewCard(props) {
+export default function MonsterCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -50,7 +50,7 @@ export default function RecipeReviewCard(props) {
             <MoreVertIcon />
           </IconButton>
         }
-        title={props.title}
+        title="Shrimp and Chorizo Paella"
         subheader="September 14, 2016"
       />
       <CardMedia

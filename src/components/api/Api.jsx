@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Card from '../card/Card'
-
+import MonsterCard from '../monster-card/Monstercard'
 
 
 
@@ -26,7 +25,7 @@ class Api extends React.Component{
     render() { 
         return ( 
             <div>
-                <Card monstres={this.state.monstres.monsters.map(x=>x)} />
+                <MonsterCard monstres={this.state.monstres.monsters.map(x=>x)} />
             </div>
          );
     }
