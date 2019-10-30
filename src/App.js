@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import RecipeReviewCard from './components/Card'
+import Api from './components/api/Api'
 
 function App() {
   return (
     <div className="App">
-      <RecipeReviewCard/>
-
+      <Api/>
     </div>
   );
 }

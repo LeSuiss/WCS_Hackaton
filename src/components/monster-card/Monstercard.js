@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
  
 }));
 
-export default function RecipeReviewCard() {
+export default function MonsterCard({monstres}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -44,7 +44,8 @@ export default function RecipeReviewCard() {
   return (
     <Card className={classes.card}>
       <CardHeader
-        
+            
+
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
@@ -86,6 +87,9 @@ export default function RecipeReviewCard() {
           <Typography paragraph>
             lorem ips
           </Typography>
+          {
+            monstres.map(x => x.name)
+          }
           <Typography paragraph>
           
             lorem ips
