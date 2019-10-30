@@ -1,15 +1,12 @@
 import React from 'react';
 import './App.css';
-import Api from './components/api/Api'
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
-    <div className="App">
-      <Api/>
-<<<<<<< HEAD
-=======
+    <div>
+      <Footer />
 
->>>>>>> 119468ee8b997f52a85d93fb7e8e9404f82dabd9
     </div>
   );
 }
