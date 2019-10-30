@@ -1,9 +1,10 @@
 import React from 'react';
-import './App.css';
+import StoryViewer from './Game/history'
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <StoryViewer></StoryViewer>
     </div>
   );
 }
