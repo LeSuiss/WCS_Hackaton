@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import RecipeReviewCard from './components/Card'
+import RecipeReviewCard from './components/monster-card/Monstercard'
 
 function App() {
   return (

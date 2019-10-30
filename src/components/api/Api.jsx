@@ -15,7 +15,7 @@ class Api extends React.Component{
          }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         axios.get('https://hackathon-wild-hackoween.herokuapp.com/monsters')
             .then(res => {
                 this.setState({ monstres: res.data})
