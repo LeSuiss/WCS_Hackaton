@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Card from '../card/Card'
-
+import MonsterCard from '../monster-card/Monstercard'
 
 
 
@@ -15,7 +14,7 @@ class Api extends React.Component{
          }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         axios.get('https://hackathon-wild-hackoween.herokuapp.com/monsters')
             .then(res => {
                 this.setState({ monstres: res.data})
@@ -26,7 +25,7 @@ class Api extends React.Component{
     render() { 
         return ( 
             <div>
-                <Card monstres={this.state.monstres.monsters.map(x=>x)} />
+                <MonsterCard monstres={this.state.monstres.monsters.map(x=>x)} />
             </div>
          );
     }
