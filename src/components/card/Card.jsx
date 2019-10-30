@@ -8,7 +8,7 @@ class Card extends React.Component {
     render() { 
         return ( 
         <div>
-            <p>{this.props.monstres.map(x=>x.name)}</p>
+            {this.props.monstres.map(x=>x.name)}
         </div> 
         
         );
