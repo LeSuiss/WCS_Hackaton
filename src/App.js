@@ -1,5 +1,5 @@
 import React from 'react';
-import StoryViewer from './Game/history'
+import StoryViewer from './components/game/history'
 
 function App() {
   return (
