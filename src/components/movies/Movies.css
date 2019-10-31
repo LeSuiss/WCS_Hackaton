@@ -1,7 +1,7 @@
-.font-small{
+.card-movie {
+    text-align: center!important
+}
 
-background-image: url("https://d1gdu49c1knkp2.cloudfront.net/Halloween/footer-bg.png");
-width: auto!important;
-height: auto!important
-
+.card {
+    margin-bottom: 5vh; 
 }

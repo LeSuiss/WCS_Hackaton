@@ -1,45 +1,24 @@
-import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import './Footer.css'
+import React from 'react';
+import './Movies.css'
+import {
+  Card, CardImg,CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 
-const FooterPage = () => {
+
+const Movies = ({title, director, image}) => {
   return (
-    <MDBFooter  className="font-small pt-4 mt-4">
-      <MDBContainer fluid className="text-center text-md-left">
-        <MDBRow>
-          <MDBCol md="6">
-            <h5 className="title">Footer Content</h5>
-            <p>
-              Here you can use rows and columns here to organize your footer
-              content.
-            </p>
-          </MDBCol>
-          <MDBCol md="6">
-            <h5 className="title">Links</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Link 1</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 2</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 3</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
-      <div className="footer-copyright text-center py-3">
-        <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
-        </MDBContainer>
-      </div>
-    </MDBFooter>
+    <div>
+      <Card>
+        <CardImg top width="100%" src={image} alt="Card image cap" />
+        <CardBody>
+          <CardTitle>{title}</CardTitle>
+          <CardSubtitle>{director}</CardSubtitle>
+          <Button>Button</Button>
+        </CardBody>
+      </Card>
+    </div>
   );
-}
+};
 
-export default FooterPage;
+export default Movies;
