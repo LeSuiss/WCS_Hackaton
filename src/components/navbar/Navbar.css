@@ -1,0 +1,12 @@
+.Navb {
+    position: fixed;
+    width: 100%;
+    position:fixed ;
+    z-index: 1000 !important;
+    height: 80px;
+    font-size: 2em;
+}
+
+.NavBrand {
+    font-size: 2em;
+}
