@@ -69,7 +69,7 @@ class MonsterCard extends Component {
           <Col  sm="4" style={{margin:'0px !important',textAlign:'center'}}key={x.id} onClick={() => this.setState({
               name: x.name,level:x.level, attack:x.attack,defense:x.defense,special:x.special,description:x.description, picture:x.picture,id:x.id,modale:!this.state.modale,cross:!this.state.cross
             })}>
-                <Card style={{marginTop:50}} className='Card' body>
+                <Card style={{marginTop:90}} className='Card' body>
 
                 <CardTitle style={{height:'90px',color:'#f39422'}}><h1>{x.name}</h1></CardTitle>
                 <img src={x.picture} alt='picture'/>

@@ -10,7 +10,7 @@ class Navb extends Component {
         <Navbar bg="dark" variant="dark" className="Navb">
         <Navbar.Brand href="#home" className="NavBrand">Le Wild Bestiaire</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="/">Bestiaire</Nav.Link>
           <Nav.Link href="#features">History</Nav.Link>
           <Nav.Link href="#pricing">Contact Us</Nav.Link>
         </Nav>
