@@ -10,7 +10,7 @@ display:flex;
 justify-content: center;
 
 }
-
+.container audio{z-index:-30000; position:absolute; left: 2000vh;}
 .row{
     margin:20px;
     padding: 20px ;
@@ -70,3 +70,4 @@ margin-top:-15px;    }
     border:black}
     .buttons{display:flex;flex-flow: wrap;}
     .buttons button{margin:10px; width:40%!important; justify-items: stretch !important;justify-content: stretch!important;}
+    .buttonReset{margin:30px;}

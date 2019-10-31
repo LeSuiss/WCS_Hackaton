@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+
 const history = (props) => {
     return (
     {
+    0:{
+        choice:[],
+        hploss:[],
+    },
     
     1:{
 
         choice:[],
         hploss:0,
-        idnum : ''
+        idnum : '',
+        choice: ["1. Enjoy the game", "2. Don't enjoy but gratz the devs", "3. nevermind the captain's age and procede to the quest"],
+        path: [10, 10, 10],
     },
     10: {
         content: `Hello ${props.name}. You are one of the finest demon hunter in the kingdom. You just got summoned by the emperor himself in the throne room.
@@ -30,8 +37,9 @@ const history = (props) => {
     12: {
         content: `You leave the capital of the empire heading to the village. Which way of travelling you want to use ?`,
         choice: ["1. By foot (2days of walk)", "2. Horse, assuming you have gold"],
-        path: [1200, 20],
+        path: [1206, 20],
         hploss: 0,
+        
     },
 
 
@@ -54,11 +62,12 @@ const history = (props) => {
         hploss: 999,
     },
 
-    1200: {
+    1206: {
         content: 'You encounter an enemy',
-        choice: ["Proceed to the next step of your journey"],
+        choice: ["Proceed to the next step of your journey after battling Dreadhorde Butcher (-4HP)"],
         path: [20],
-        hploss: 0,
+        hploss: 4,
+        
     },
 
     20: {
@@ -102,17 +111,18 @@ const history = (props) => {
     30: {
         content: `As the drunk told you, the castle is accessible by various ways on which your travel will depends. You have to face a choice:`,
         choice: ["1. Reach the Castle by following the river", "2. Cross the moutain", "3. Use the usual roadway"],
-        path: [3100, 3200, 3300],
-        hploss: 0
+        path: [3102, 3204, 3300],
+        hploss: 0,
+        
     },
 
-    3100: {
+    3102: {
         content: `Wisely, you follow the calm river. Although it does not seem to like it much, the only guardian there is a Demoniac Cat. You have to fight it to get through.`, choice: ['1: Fight the Demoniac Cat (-4 HP)'],
         path: [40],
         hploss: 4,
-    },
+        },
 
-    3200: {
+    3204: {
         content: `A corpse blockade stops your advance. You have no choice but to fight it to get through.`, choice: ['1: Fight the corpse blockade (-4 HP)'],
         path: [40],
         hploss: 4,
@@ -129,6 +139,7 @@ const history = (props) => {
         choice: ['1. Continue through the corridor.', '2. Take a look around.'],
         path: [41, 401],
         hploss: 0,
+        
     },
     401: {
         content: `As you keep walking around, everything seems to look the same. After a while, you realise you're back where you started.`, choice: ['1. Continue through the corridor.'],
@@ -154,8 +165,43 @@ const history = (props) => {
 
     50: {
         content: `The door does not even emit a single creak as it turns. Before you lies a gigantic hall, impressive just for it's sheer size; but the ancient feel that came with it was even more breathtaking. Measuring your steps, you walk in, almost in awe. A voice suddenly resonates : "Welcome, young human. What brings you here ?" Opposite from you, lavishly sitting on a throne of gold incrustated with gems, a tall and threatening man lies. His skin is paler than the stairs of white stone leading up to him, and his presence oppressing. Even from that distance, it seems you can distinguish two pointy teeth in his wide smile.`, 
-        choice: ['1. Come closer', '2. Attack him.'],
-        path: [51,52],
+        choice: ['1. Come closer and see what he has to say', '2. Attack him.'],
+        path: [51,5009],
+        hploss: 0,
+    },
+
+
+    51: {
+        content: `You walk up. "I am ${props.name}, and I am a hunter of evil. Who are you siding with ?" The man before you smiles again, and introduces himself as Alucard, a Vampire Lord who's lived far from human life for decade. The vampire tells you a tale of a much greater evil: the dreadful Apocalypse lord, ruler of Chaos and harbinger of Doom. After seizing control of the Liches and their lords, along with killing and bringing back from the dead the weaker Vampires, he's been wreaking havoc. Good luck, ${props.name}, as your chance of survival are really low.`, 
+        choice: ['1. Believe him, save the world and fight the Apocalypse Lord', '2. Call his bluff, and attack him.'],
+        path: [6019, 5009],
+        hploss: 0,
+    },
+
+    5009: {
+        content: `Was this really a good choice ? The Vampire stops your blow, a smirk of disdain that you feel towards your entire race on his face.`, 
+        choice: ['Fight the lord vampire. Beware his might !'],
+        path: [98],
+        hploss: 16,
+    },
+
+    6019: {
+        content: `The Vampire, protecting you and him with his own powers, flies you out to the Northern Mountains; the home of the dreadful Apocalypse lord. Good luck, ${props.name}, as he is the greatest foe to walk this Earth.`, 
+        choice: ['1.Save the world and fight the apocalypse lord'],
+        path: [99],
+        hploss: 20,
+    },
+    
+    98: {
+        content: `The Vampire is slain. But you didn't hear his warnings, nor tried to inform yourself; he was the only one able to overcome the unmatchable psychic powers of the Apocalypse lord. Your original mission might be complete.. But you will be a dead man within two months, be it to the hands of the Emperor or the maddened Lord. You could call this a victory, but it is a bitter one.`, 
+        choice: ['Die'],
+        path: [0],
+        hploss: 999,
+    },
+    99: {
+        content: `GAME COMPLETED. CONGRATULATIONS !!!!`, 
+        choice: ['Game restart'],
+        path: [1],
         hploss: 0,
     },
 
