@@ -18,12 +18,12 @@ const history = (props) => {
         hploss: 0,
     },
 
-    11: {
-        content: `The empire possesses an off the scale library. Lost in this multitude of knowledge, your meet the grand meister, who inquires about your goals. After hearing you out, he invites you to follow him and leads you to a small chamber.
+    11: {content:`The empire possesses an off the scale library. Lost in this multitude of knowledge, your meet the grand meister, who inquires about your goals. After hearing you out, he invites you to follow him and leads you to a small chamber.
     "Here is what you need, young hunter." He gives you an old book named "vampires throughout history: an eternal enemy or the most powerful ally?"
-    CONGRATULATIONS !!! YOU HAVE IMPROVED YOUR KNOWLEDGE OF VAMPIRE !!` ,
-        choice: ["1. Set off to the village of DONZERICIA"],
-        path: [12],
+    CONGRATULATIONS !!! YOU HAVE IMPROVED YOUR KNOWLEDGE OF VAMPIRE !!`,
+
+        choice: ["1. Set off to the village of Donzericia", "2. Ask gold from the emperor", "3. Ask the emperor to have a sexual relationship"],
+        path: [12,13,14],
         hploss: 0,
     },
 

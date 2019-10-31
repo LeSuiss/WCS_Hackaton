@@ -12,7 +12,9 @@ const StoryViewer = () => {
     const [idnum, setIdnum] = useState(1);
     const historyTab=history({name})
     const [armor, setArmor] = useState(false);
-    
+    const [gold, setGold] = useState(false);
+    const [book, setBook] = useState(false);
+   
     //Handling events
     
     const hpHandler= () => setHP(hp-historyTab[idnum].hploss)
@@ -26,15 +28,32 @@ const StoryViewer = () => {
             </>
         )
     };
+    const displayGold=()=>{
+        if (idnum === 13 && gold===false){return(setGold(true)
+            )
+        };
+        if (gold===true){return <img className="gold" alt='' src="https://previews.123rf.com/images/viktorijareut/viktorijareut1610/viktorijareut161000203/67827499-vector-illustration-bourse-m%C3%A9di%C3%A9vale-sac-d-or-et-de-pile-de-pi%C3%A8ces-d-or-sac-en-cuir-marron-ic%C3%B4ne.jpg"></img>
+            }
+
+    }
     const displayArmor=()=> {
         if (idnum === 221 && armor===false){return(setArmor(true)
             )
         };
-        console.log(armor) 
-        if (armor===true){return(<div></div>)}
+        if (armor===true){return<img className="armor" alt='' src="https://comps.canstockphoto.com/plate-armor-icon-in-black-style-isolated-drawing_csp41631891.jpg"></img>
+            }
     }
-                
+    const displayBook=()=> {
+        if (idnum === 11 && book===false){return(setBook(true)
+            )
+        };
+        if (book===true){return<img className="book" alt='' src="https://www.clipartwiki.com/clipimg/detail/299-2995739_book-stack-clipart-black-and-white.png"></img>
+            }
+    }
     
+    const displayImage=()=>{
+
+    }
     const historyContent = () => {if (idnum ===1)
         {            
                 return(
@@ -66,15 +85,12 @@ const StoryViewer = () => {
     const viewer = () => {
         return (
     <Container className="contain">
-
-<h4>{displayArmor()}</h4>
+            <div className="items"> {displayArmor()} {displayBook()}  {displayGold()}</div>
                 <img className="imgHp" alt='' src="https://images.emojiterra.com/google/android-10/128px/2764.png"></img>
                 <h4>{displayHp()}</h4>
-                {armor===true?<img className="armor" alt='' src="https://comps.canstockphoto.com/plate-armor-icon-in-black-style-isolated-drawing_csp41631891.jpg"></img>:""
-                }
-                <img className="imgHp" alt='' src="https://images.emojiterra.com/google/android-10/128px/2764.png"></img>
+                    <img className="imgHp" alt='' src="https://images.emojiterra.com/google/android-10/128px/2764.png"></img>
                 <Row>
-                    <Col id="monsterImg" sm="8"  >Image</Col>
+                    <Col id="monsterImg" sm="8"  >fffff</Col>
                     <Col id="monsterPhrase" sm="8">Phrase de prest</Col>
                 </Row>
 
@@ -85,7 +101,6 @@ const StoryViewer = () => {
                 <Row className="buttons">
                     {displayButtons()}
                 </Row>
-                
                 </Container>
         )
     }
@@ -100,4 +115,4 @@ const StoryViewer = () => {
 
 
 }
-export default StoryViewer;
+export default StoryViewer; 
