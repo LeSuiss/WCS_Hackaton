@@ -28,7 +28,8 @@ class MonsterCard extends Component {
       special:[],
       description:[],
       id:[],
-      scary:false
+      modale:false,
+      cross:true
 
     }
 
@@ -46,14 +47,17 @@ class MonsterCard extends Component {
   render() {
 
     return (
-      <div className='total'>
-         <div className='info'>
+      <div className='total' onLoad={()=>this.setState({modale:false})}>
+        <div className='info' className={this.state.modale === false ? 'display' : 'displayNone'} 
+          className={this.state.cross === false ? 'display':'displayNone'}>
+
             <h1>{this.state.name}</h1>
             <p>Level : {this.state.level}</p>
             <p>Attack : {this.state.attack}</p>
             <p>Defense : {this.state.defense}</p>
             <p>Special : {this.state.special}</p>
             <p>Description : {this.state.description}</p>
+          
           </div>  
            
         <Container className='cont' >
@@ -63,16 +67,15 @@ class MonsterCard extends Component {
 
           {this.state.data.monsters.map((x) =>
           <Col  sm="4" style={{margin:'0px !important',textAlign:'center'}}key={x.id} onClick={() => this.setState({
-              name: x.name,level:x.level, attack:x.attack,defense:x.defense,special:x.special,description:x.description, picture:x.picture,id:x.id
+              name: x.name,level:x.level, attack:x.attack,defense:x.defense,special:x.special,description:x.description, picture:x.picture,id:x.id,modale:!this.state.modale,cross:!this.state.cross
             })}>
                 <Card style={{marginTop:50}} className='Card' body>
 
-                <CardTitle style={{height:'90px'}}><h1>{x.name}</h1></CardTitle>
+                <CardTitle style={{height:'90px',color:'#f39422'}}><h1>{x.name}</h1></CardTitle>
                 <img src={x.picture} alt='picture'/>
                 <Button style={{marginTop:'40px',backgroundColor:'black'}} >Détails</Button>
                 </Card>
-            </Col>
-                      )}
+            </Col>)}
             </Row>
             {this.scary}
         </Container>
