@@ -11,19 +11,6 @@ const StoryViewer = () => {
     const [name, setName] = useState("Player One");
     const [idnum, setIdnum] = useState(1);
     const historyTab=history({name})
-<<<<<<< HEAD
-
-    const handleChangeName=(e)=>{ setName(e.target.value)
-    }    
-
-    useEffect( () =>{
-     const hpHandler = ()=> {
-     setHP(hp-historyTab[idnum].hploss)
-    }
-    hpHandler()
-    },[idnum]
-    )
-=======
     const [armor, setArmor] = useState(false);
     const [gold, setGold] = useState(false);
     const [book, setBook] = useState(false);
@@ -47,7 +34,6 @@ const StoryViewer = () => {
         };
         if (gold===true){return <img className="gold" alt='' src="https://previews.123rf.com/images/viktorijareut/viktorijareut1610/viktorijareut161000203/67827499-vector-illustration-bourse-m%C3%A9di%C3%A9vale-sac-d-or-et-de-pile-de-pi%C3%A8ces-d-or-sac-en-cuir-marron-ic%C3%B4ne.jpg"></img>
             }
->>>>>>> b57ae66d98d8659679ee6202205707cbc64cd7cf
 
     }
     const displayArmor=()=> {
@@ -82,32 +68,6 @@ const StoryViewer = () => {
                             )                
                     }
     }
-<<<<<<< HEAD
-
-    
-            const viewer = () => {
-        return (
-            <Container>
-
-                <Row>
-                    <Col id="monsterImg" sm="8">Image</Col>
-                    <Col id="monsterPhrase" sm="8">Phrase de prest</Col>
-                </Row>
-
-                <Row>
-                    {historyContent()}
-                </Row>
-
-                <Row>
-                    {displayButtons()}
-                </Row>
-                <div>{hp}</div>
-            </Container>
-        )
-    }
-
-=======
->>>>>>> b57ae66d98d8659679ee6202205707cbc64cd7cf
     const displayButtons = () => { 
         return (
             historyTab[idnum].choice.map(eachChoice => {
