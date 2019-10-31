@@ -1,0 +1,73 @@
+
+.container *{
+    display:flex;
+    justify-content: center ;
+    }
+.containter>*{color:white; position: absolute;z-index:9999}
+body{background-color:rgb(71, 65, 65);
+height: 110vh;
+display:flex;
+justify-content: center;
+
+}
+.container audio{z-index:-30000; position:absolute; left: 2000vh;}
+.row{
+    margin:20px;
+    padding: 20px ;
+    background-color:#443737 ;
+    opacity:0.85;
+    border:solid 2px red;
+}
+
+.col-sm-8, form>*{margin:20px;}
+
+.contain .row>*{background-color:#ff4d00;color:white; padding:10px;}
+.contain button, .contain form>*{color:white; background-color: black}
+
+    #root{background-color: rgb(255, 77, 0);
+    }
+    .imgHp{object-fit: fill; z-index: 100; position:absolute; height: 50px;}
+/* pv */
+        .contain h4{
+            height:25px; 
+            margin:10px;
+            color:white; 
+            font-size: 25px; 
+            z-index:1000;
+            position: absolute;
+        display:flex;
+        align-items: center;
+        }
+        .gold, .armor, .book{
+            height:8vh;
+            margin:10px;
+            border-radius:50%; 
+           }
+
+    .items{
+        position: absolute; 
+        right: 10px; 
+        z-index: 99999999999999999;
+    display:flex;
+flex-flow:column;
+margin-top:-15px;    }
+
+    .contain{
+        padding: 40px !important;
+        min-height: 90vh ;
+        width:auto;
+        background-color: black;
+        margin:20px !important;
+        padding: 20px !important;
+        position: relative;
+
+    };
+    
+     #monsterImg{height:40% !important}
+
+    .content{color:white;}
+    form{margin:10px !important;
+    border:black}
+    .buttons{display:flex;flex-flow: wrap;}
+    .buttons button{margin:10px; width:40%!important; justify-items: stretch !important;justify-content: stretch!important;}
+    .buttonReset{margin:30px;}

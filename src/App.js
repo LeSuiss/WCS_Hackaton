@@ -1,12 +1,20 @@
 import React from 'react';
 import './App.css';
-import Api from './components/api/Api'
+import Footer from './components/footer/Footer'
+import MonsterCard from '../src/components/monster-card/Monstercard'
+import Navb from './components/navbar/Navbar';
+import {Route,Switch,BrowserRouter} from 'react-router-dom'
+import Router from './components/router/Router';
 
 function App() {
   return (
-    <div className="App">
-      <Api/>
+    <div>
+      
+    <div className='cotainerApp'>
+    <Navb/>
       <Router />
+      <Footer/>
+    </div>
     </div>
   );
 }
