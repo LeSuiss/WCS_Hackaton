@@ -1,0 +1,10 @@
+
+
+.containerFooter {
+    color: red; 
+    font-size: 2em;
+    background: black;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    text-align: center;
+    max-width: 100%;
+}
