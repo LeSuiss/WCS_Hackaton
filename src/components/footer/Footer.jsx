@@ -6,12 +6,12 @@ class Footer extends Component {
     state = {  }
     render() { 
         return (
-            <Container>
+            <Container className='containerFooter' >
                 <Row>
-                    <Col>
+                    <Col sm='6'>
                         About US
                     </Col>
-                    <Col>
+                    <Col sm='6'>
                         Help
                     </Col>
                 </Row>
