@@ -11,11 +11,16 @@ const StoryViewer = () => {
     const [idnum, setIdnum] = useState(1);
     const historyTab=history({name})
 
-    const hpHandler= () => setHP(hp-historyTab[idnum].hploss)
     const handleChangeName=(e)=>{ setName(e.target.value)
     }    
 
-
+    useEffect( () =>{
+     const hpHandler = ()=> {
+     setHP(hp-historyTab[idnum].hploss)
+    }
+    hpHandler()
+    },[idnum]
+    )
 
 
     const historyContent = () => {if (idnum ===1)
@@ -50,7 +55,7 @@ const StoryViewer = () => {
                 <Row>
                     {displayButtons()}
                 </Row>
-
+                <div>{hp}</div>
             </Container>
         )
     }
