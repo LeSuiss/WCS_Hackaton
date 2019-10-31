@@ -3,9 +3,6 @@ import './App.css';
 import Footer from './components/footer/Footer'
 import MonsterCard from '../src/components/monster-card/Monstercard'
 
-
-
-
 function App() {
   return (
     <div>
