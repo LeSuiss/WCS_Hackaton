@@ -1,12 +1,19 @@
+.containerNavBar>*{margin:0px !important; padding:0Px !important;}
 .Navb {
-    position: fixed;
-    width: 100%;
-    position:fixed ;
-    z-index: 1000 !important;
-    height: 50px;
+    display: flex;
+    z-index: 100000000000000000000000000000000000000000 !important;
+    height: 90px ;
     font-size: 15px;
+    opacity: 1;
+    flex-direction: row;
+    overflow: hidden;
+    }
+.container{padding:20px !important;
+margin-top:-15px;
 }
-
 .NavBrand {
     font-size: 2em;
 }
+
+.searchBar{display: flex;flex-direction: row !important;}
+.searchBar>*{width:30% !important; margin:10px;}
