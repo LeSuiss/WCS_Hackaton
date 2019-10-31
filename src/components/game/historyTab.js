@@ -7,6 +7,7 @@ const history = (props) => {
 
         choice:[],
         hploss:0,
+        idnum : ''
     },
     10: {
         content: `Hello ${props.name}. You are one of the finest demon hunter in the kingdom. You just got summoned by the emperor himself in the throne room.
