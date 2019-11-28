@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {Container, Col, Row, Button, Nav, Form, FormControl, Navbar } from 'react-bootstrap';
 import './Navbar.css'
-
+import {Link} from 'react-router-dom'
 
 class Navb extends Component {
-    state = {  }
-    render() { 
+
+  render() { 
         return ( 
           <Container className="containerNavBar">
               <Row>
@@ -14,9 +14,9 @@ class Navb extends Component {
               <Col sm="8">
                 <Navbar.Brand href="#home" className="NavBrand">Le Wild Bestiaire</Navbar.Brand>
                 <Nav className="mr-auto">
-                  <Nav.Link href="/">Bestiaire</Nav.Link>
-                  <Nav.Link href="/history">History</Nav.Link>
-                  <Nav.Link href="#pricing">Contact Us</Nav.Link>
+                  <Link to="/">Bestiaire</Link>
+                  <Link to="/history">History</Link>
+                  <Link href="#pricing">Contact Us</Link>
                 </Nav>
               </Col >
               <Col sm="4" >
@@ -33,5 +33,5 @@ class Navb extends Component {
       ;
     }
 }
- 
+
 export default Navb;

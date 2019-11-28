@@ -27,7 +27,7 @@ const StoryViewer = () => {
         }
         hpHandler();
 
-    }, [historyTab[idnum].hploss]
+        }, [historyTab[idnum].hploss]
     )
     //Handling events
 
@@ -84,6 +84,7 @@ const StoryViewer = () => {
     }
     const setReset = () => {setIdnum(1);
         setHP(30)}
+
     const displaySound = () => {
         if (idnum > 1000) {
             let ida = idnum % 100

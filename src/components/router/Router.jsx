@@ -11,7 +11,7 @@ class Router extends Component {
                 <Route exact path='/history' component={StoryViewer} />
                 <Route exact path='/' component={MonsterCard} />
             </Switch>
-         );
+        );
     }
 }
  
